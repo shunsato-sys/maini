@@ -1,5 +1,20 @@
 import type { Metadata } from "next";
+import { Zen_Kaku_Gothic_New, Shippori_Mincho } from "next/font/google";
 import "./globals.css";
+
+const sans = Zen_Kaku_Gothic_New({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const display = Shippori_Mincho({
+  subsets: ["latin"],
+  weight: ["500", "700"],
+  variable: "--font-display",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "まいにち献立",
@@ -18,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja">
+    <html lang="ja" className={`${sans.variable} ${display.variable}`}>
       <body className="antialiased">{children}</body>
     </html>
   );
