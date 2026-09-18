@@ -1,3 +1,21 @@
+# まいにち献立（maini）
+
+毎日の夕食を考える負担を減らすスマホ向け献立アプリです。
+
+## ローカル起動
+
+```sh
+npm run install:ci
+npm run db:local   # 初回のみ（または D1 エラー時）
+npm run dev
+```
+
+ブラウザで `http://localhost:5173/` を開き、必要なら `/signin-with-chatgpt?return_to=/` でローカルログインします。
+
+`.env` に `OPENAI_API_KEY` があれば AI 提案、無い場合はレシピ帳・定番・参考レシピから提案します。
+
+---
+
 # vinext-starter
 
 A clean full-stack starter running on [vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and Drizzle support.

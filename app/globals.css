@@ -83,6 +83,9 @@ body::before{
   mix-blend-mode:multiply;
 }
 .kitchen{position:relative;z-index:1;max-width:1080px;margin:auto;padding:0 28px 48px}
+.stars{display:inline-flex;gap:2px;align-items:center;margin:4px 0 8px}
+.star-btn{border:0;background:transparent;padding:2px;line-height:0;cursor:pointer}
+.star-btn:disabled{cursor:default;opacity:.7}
 .top{
   display:flex;align-items:flex-end;justify-content:space-between;
   padding:36px 0 22px;
